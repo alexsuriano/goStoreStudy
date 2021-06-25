@@ -10,13 +10,13 @@
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <title>Lojinha Do Alê</title>
+    <title>Lojinha Do Ale</title>
 </head>
 <nav class="navbar navbar-light bg-light mb-4">
-    <a class="navbar-brand" href="/">Lojinha Do Alê</a>
+    <a class="navbar-brand" href="/">Lojinha do Ale</a>
 </nav>
 
-<body style="background-color: black;">    
+<body style="background-color: black;">
     <div class="container">
         <section class="card">
             <div>
@@ -30,23 +30,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{range .}}
                         <tr>
-                            <td>Camiseta</td>
-                            <td>Bem bonita</td>
-                            <td>29</td>
-                            <td>10</td>
+                            <td>{{.Nome}}</td>
+                            <td>{{.Descricao}}</td>
+                            <td>{{.Preco}}</td>
+                            <td>{{.Quantidade}}</td>
                         </tr>
-                        <tr>
-                            <td>Notebook</td>
-                            <td>Muito rápido</td>
-                            <td>1999</td>
-                            <td>2</td>
-                        </tr>
+                        {{end}}
                     </tbody>
                 </table>
             </div>
         </section>
-
     </div>
 </body>
 
